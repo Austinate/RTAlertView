@@ -342,8 +342,9 @@
 {
     if (_alertViewController == nil)
     {
+        NSBundle *bundle = [NSBundle bundleForClass:[RTAlertView class]];
         _alertViewController = [[RTAlertViewController alloc] initWithNibName:nil
-                                                                       bundle:nil];
+                                                                       bundle:bundle];
         _alertViewController.alertView = self;
     }
     
